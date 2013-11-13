@@ -1,4 +1,4 @@
-# RethinkDB using Vagrant
+# RethinkDB Cluster using Vagrant
 Install [RethinkDB](http://rethinkdb.com) using [Vagrant](http://vagrantup.com).
 
 ## Quick Start -- One Liner
@@ -10,9 +10,13 @@ Install [RethinkDB](http://rethinkdb.com) using [Vagrant](http://vagrantup.com).
 By default, you access the dashboard here:  
 [http://localhost:8080/](http://localhost:8080/)
 
-## Multiple servers
-There are 3 VMs inside the Vagrantfile, so that you can play around with Replication and Sharding as well.
-The machines can be reached by:
+## Cluster
+To start the three node cluster run the quick start above, or if you've already cloned the repo
+you can run "vagrant up". 
+
+
+## Stopping the Cluster
+vagrant destory
 
 * localhost:8080-8082
 * 10.10.10.10, 10.10.10.11, 10.10.10.12
