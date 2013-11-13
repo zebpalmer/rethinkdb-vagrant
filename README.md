@@ -24,7 +24,8 @@ To stop the Cluster, run "vagrant destory"
 This is a third generation fork (love open source!) of a simple rethinkdb vagrant environment originally posted last year.
 The original fork was a single instance, the intermediate fork added multiple nodes but was missing some config items
 that were required (added in recent rethinkdb versions?). This version, should give you a working cluster with just the 
-"vagrant up" command.   Enjoy. 
+"vagrant up" command. This needs a bit more tlc to cleanup a bit and support more cluster nodes, perhaps even use the puppet
+modules, but for now, it works. 
 
 
 
