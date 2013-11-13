@@ -25,7 +25,7 @@ Vagrant::Config.run do |config|
 				apt-get install --assume-yes rethinkdb;
 	
 				sed -e 's/somebody/root/g' -e 's/somegroup/root/g' /etc/rethinkdb/default.conf.sample > /etc/rethinkdb/instances.d/default.conf
-	
+                                echo "bind=all" >> /etc/rethinkdb/instances.d/default.conf	
 				rethinkdb create -d /var/lib/rethinkdb/instances.d/default 2>&1;
 	
 				service rethinkdb start;
@@ -61,8 +61,9 @@ Vagrant::Config.run do |config|
 				apt-get install --assume-yes rethinkdb;
 	
 				sed -e 's/somebody/root/g' -e 's/somegroup/root/g' /etc/rethinkdb/default.conf.sample > /etc/rethinkdb/instances.d/default.conf
-	
-				rethinkdb create -d /var/lib/rethinkdb/instances.d/default 2>&1;
+                                echo "bind=all" >> /etc/rethinkdb/instances.d/default.conf	
+				echo "join=10.10.10.10:29015" >> /etc/rethinkdb/instances.d/default.conf
+                                rethinkdb create -d /var/lib/rethinkdb/instances.d/default 2>&1;
 	
 				service rethinkdb start;
 			EOF
@@ -99,7 +100,9 @@ Vagrant::Config.run do |config|
 				sed -e 's/somebody/root/g' -e 's/somegroup/root/g' /etc/rethinkdb/default.conf.sample > /etc/rethinkdb/instances.d/default.conf
 	
 				rethinkdb create -d /var/lib/rethinkdb/instances.d/default 2>&1;
-	
+                                echo "bind=all" >> /etc/rethinkdb/instances.d/default.conf	
+				echo "join=10.10.10.10:29015" >> /etc/rethinkdb/instances.d/default.conf
+
 				service rethinkdb start;
 			EOF
 		end
