@@ -20,4 +20,11 @@ Three nodes are started 10.10.10.10, 10.10.10.11, 10.10.10.12 and can be accesse
 To stop the Cluster, run "vagrant destory"
 
 
+## Status
+This is a third generation fork (love open source!) of a simple rethinkdb vagrant environment originally posted last year.
+The original fork was a single instance, the intermediate fork added multiple nodes but was missing some config items
+that were required (added in recent rethinkdb versions?). This version, should give you a working cluster with just the 
+"vagrant up" command.   Enjoy. 
+
+
 
