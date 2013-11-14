@@ -8,14 +8,14 @@ Install [RethinkDB](http://rethinkdb.com) using [Vagrant](http://vagrantup.com).
 
 
 ## Cluster
-To start the three node cluster run the quick start above, or if you've already cloned the repo
-you can run "vagrant up". 
+To start the default three node cluster run the quick start above, or if you've already cloned the repo
+you can run "./rethinkdb.sh"
+
+If you would like to add more nodes, there are 11 slaves definitions availbile. 
+By default, master, slave1 and slave2 are started, start others by running "vagrant up slaveX".  
 
 By default, you access the dashboard here:  
 [http://localhost:8080/](http://localhost:8080/)
-
-Three nodes are started 10.10.10.10, 10.10.10.11, 10.10.10.12 and can be accessed via localhost:8080-8082
-
 
 To stop the Cluster, run "vagrant destory"
 
@@ -24,8 +24,7 @@ To stop the Cluster, run "vagrant destory"
 This is a third generation fork (love open source!) of a simple rethinkdb vagrant environment originally posted last year.
 The original fork was a single instance, the intermediate fork added multiple nodes but was missing some config items
 that were required (added in recent rethinkdb versions?). This version, should give you a working cluster with just the 
-"vagrant up" command. This needs a bit more tlc to cleanup a bit and support more cluster nodes, perhaps even use the puppet
-modules, but for now, it works. 
+"vagrant up" command. This needs a bit more tlc but for now, it works. 
 
 
 

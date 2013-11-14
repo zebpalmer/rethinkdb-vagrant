@@ -16,4 +16,9 @@ then
   exit 1;
 fi
 
-vagrant up 
+vagrant up master
+vagrant up slave1
+vagrant up slave2
+
+
+
